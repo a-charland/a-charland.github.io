@@ -1,0 +1,167 @@
+/* padding and borders included in width and height */
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* mobile first design */
+
+header {
+    text-align: center;
+    margin: 0;
+    padding: 0; 
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+	border-radius: 0 0 85% 85% / 40%;
+}
+
+#about {
+    border-radius: 0 0 0 0;
+}
+
+.info {
+    margin: 0;
+    padding: 10%; 
+    width: 100%;
+    height: 100%;
+    color: white;
+	text-shadow: 1px 1px 1px darkslategray;
+    background-image: linear-gradient( 135deg, rgb(60,179,113, 0.7) 10%, rgb(106, 90, 205, 0.7) 100%);
+}
+
+.title {
+    font-family: sans-serif;
+    margin-bottom: 5%;
+    font-size: 30px; /* changes depending on device screen size */
+}
+
+.subtitle {
+    font-family: serif;
+	margin-bottom: 5%;
+    font-size: 12px; /* changes depending on device screen size */
+    color: honeydew;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: darkslategray;
+	background: white;
+	margin-bottom: 5%;
+	box-shadow: 0 3px 20px 0 darkslategray;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* changes depending on device screen size */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+.art {
+    width: 70%;
+    height: auto;
+    text-align: center;
+    padding: 5%;
+}
+
+.about {
+    width: 45%; 
+    height: auto; 
+    display: inline; 
+    padding: 3%;
+    font-size: 14px; /* changes depending on device screen size */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(60,179,113, 0.3);
+    color: darkslategray;
+}
+
+.aboutList {
+    font-size: 14px; /* changes depending on device screen size */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkslategray;
+}
+
+footer {
+    float: right;
+    font-size: 12px;
+    font-family: serif;
+}
+
+/* for devices larger than a mobile but smaller than a large latop */
+@media only screen and (min-width: 700px) {
+
+    .title {
+        font-size: 50px; 
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .art {
+        width: 45%;
+        height: auto;
+    }
+    
+    /* the longer drawing should have its own column to not be overly shrunken */
+    #goddesses {
+        width: 90%;
+    }
+
+    .about {
+        font-size: 20px;
+    }
+
+    .aboutList{
+        font-size: 20px;
+    }
+}
+
+/* for large laptops and anything larger than them */
+@media only screen and (min-width: 900px) {
+
+    .title {
+        font-size: 70px;
+    }
+
+    .subtitle {
+        font-size: 25px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .art {
+        width: 50%;
+        height: auto;
+    }
+
+    /* the longer drawing should have its own column to not be overly shrunken */
+    #goddesses {
+        width: 90%;
+    }
+
+    .about {
+        font-size: 20px;
+    }
+
+    .aboutList{
+        font-size: 20px;
+    }
+}
