@@ -4,29 +4,91 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Digital Art Portfolio</title>
-        <link rel="stylesheet" href="/a-charland.github.io/portfolio.css">
+        <link rel="stylesheet" href="portfolio.css">
+        <script type="text/javaScript" src="portfolio.js"></script>
     </head>
 
-    <body>
+    <body onresize="positionSliderButtons()">
         <!--rounded header-->
         <header>
             <div class="info">
-                <h1 class="title">Welcome to Alexandra Charland's Portfolio</h1>
-                <h3 class="subtitle">A collection of digital art in different styles, som realistic portraits, tattoo designs, orthographic views, and a digital sketch-style painting.</h3>
+                <h1 class="title">Alexandra Charland's Portfolio</h1>
+                <h3 class="subtitle">A collection of digital art in different styles, some realistic portraits, tattoo designs, orthographic views, and a digital sketch-style painting.</h3>
                 <a href="AboutMe.html"><button>ABOUT THE ARTIST</button></a>
             </div>
         </header>
-
-        <!--the art-->
-        <br><br>
+        
+        <!-- the carousel of art -->
         <div class="container">
-            <img class="art" src="Portrait.jpg" alt="A digital portrait of a woman with the shadow of a window across her face.">
-            <img class="art" src="TattooDesigns.jpg" alt="Five tattoo designs: two bats, an abstract solar system, a pepper, a circular wave.">
-            <img class="art" id="goddesses" src="AncientGreekGoddesses.jpg" alt="Stylized portraits of Aphrodite, Medusa and Athena.">
-            <img class="art" src="OrthographicViews.jpg" alt="Orthographic views of a dog nail clipper: top, front, right side, back.">
-            <img class="art" src="Sketch.jpg" alt="A digital sketch of a woman holding a book over her face.">
-        </div>
+            
+                <!-- previous button -->
+                <div class="slider">
+                    <button class="button" onclick="prevSlide()">
+                        <span> &lt; </span>
+                    </button>
+                </div>
+                
+                <div class="slide showing">
+                    
+                    <p id="title">"SHADOW OF THE WINDOW"<br>May 2020</p>
+
+                    <div style="text-align:center"><a href="SofW.html"><img class="art" src="Portrait.jpg" alt="A digital portrait of a woman with the shadow of a window across her face."></a></div>
+                    
+                    <p id="info">Made with Procreate as a personal project.</p>
+                    
+                </div>
+                
+                <div class="slide">
+                    
+                    <p id="title">"TATTOO COLLECTION"<br>September 2019</p>
+                    
+                    <div style="text-align:center"><a href="TD.html"><img class="art" src="TattooDesigns.jpg" alt="Five tattoo designs: two bats, an abstract solar system, a pepper, a circular wave."></a></div>
+                        
+                    <p id="info">Made with Autodesk Sketchbook as a series of commissions and personal projects.</p>
+                      
+                </div>
+                
+                <div class="slide">
+                    
+                    <p id="title">"ANCIENT GREEK GODDESSES: An Interpretation"<br>May 2020</p>
+                    
+                    <div style="text-align:center"><a href="AGG.html"><img class="art" src="AncientGreekGoddesses.jpg" alt="Stylized portraits of Aphrodite, Medusa and Athena."></a></div>
+                        
+                    <p id="info">Made with Procreate for a commission.</p>
+                    
+                </div>
+                
+                <div class="slide">
+                    
+                    <p id="title">"ORTHOGRAPHIC VIEWS OF A DOG NAIL TRIMMER"<br>February 2021</p>
+                    
+                    <div style="text-align:center"><a href="OVoaDNT.html"><img class="art" src="OrthographicViews.jpg" alt="Orthographic views of a dog nail clipper: top, front, right side, back."></a></div>
+                    
+                    <p id="info">Made with Procreate for a mechanism description project for Concordia's course, ENCS282 Technical Writing and Communication.</p>
+                    
+                </div>
+                
+                <div class="slide">
+                    
+                    <p id="title">"BOOKWORM: Inspired by a Vogue Cover"<br>August 2020</p>
+                    
+                    <div style="text-align:center"><a href="Bk.html"><img class="art" src="Sketch.jpg" alt="A digital sketch of a woman holding a book over her face."></a></div>
+                       
+                    <p id="info">Made with Procreate as a present for a family member.</p>
+                    
+                </div>
+            
+                <!-- next button -->
+                <div class="slider">
+                    <button class="button" onclick="nextSlide()">
+                        <span> &gt; </span>
+                    </button>
+                </div>
+                
+            </div>
+
     </body>
+    
 
     <!--copyright info-->
     <footer>

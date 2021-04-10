@@ -1,7 +1,13 @@
-/* padding and borders included in width and height */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@300&family=Train+One&family=Crimson+Text&display=swap');
+
+/* 
+padding and borders included in width and height, 
+font applied
+*/
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Crimson Text', serif;
+    text-decoration: none;
 }
 
 /* mobile first design */
@@ -18,6 +24,7 @@ header {
 
 #about {
     border-radius: 0 0 0 0;
+    background-color: white;
 }
 
 .info {
@@ -31,16 +38,81 @@ header {
 }
 
 .title {
-    font-family: sans-serif;
+    font-family: 'Train One', 'Nunito', sans-serif;
     margin-bottom: 5%;
     font-size: 30px; /* changes depending on device screen size */
 }
 
 .subtitle {
-    font-family: serif;
+    font-family: 'Nunito', serif;
 	margin-bottom: 5%;
     font-size: 12px; /* changes depending on device screen size */
     color: honeydew;
+}
+
+/* row of slider + image box + slider */
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(darkseagreen, 0.2);
+}
+
+.slider-left {
+    padding: 2%;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.slider-right {
+    padding: 2%;
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+}
+
+.button {
+    color: white;
+    background: darkseagreen;
+    font-weight: 40px;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    flex-direction: column;
+    visibility: hidden;
+    grid-column: 2/2;
+    grid-row: 1 / 1;
+}
+
+.showing {
+    visibility: visible;
+}
+
+#title {
+    font-size: 12px;
+    text-align: center;
+    color: darkseagreen;
+    text-shadow: 0px 1px 1px darkslategrey;
+    font-family: 'Raleway', sans-serif;
+}
+
+.art {
+    width: 90%;
+    height: auto;
+}
+
+#info {
+    font-size: 12px;
+    text-align: center;
+    color: darkslategray;
 }
 
 button {
@@ -52,13 +124,14 @@ button {
 	background: white;
 	margin-bottom: 5%;
 	box-shadow: 0 3px 20px 0 darkslategray;
+    font-family: 'Raleway', sans-serif;
 }
 
 button:hover{
 	cursor: pointer;
 }
 
-.container {
+.containerAM {
     display: flex;
     flex-direction: column; /* changes depending on device screen size */
     justify-content: center;
@@ -66,34 +139,30 @@ button:hover{
     padding-bottom: 10%;
 }
 
-.art {
-    width: 70%;
-    height: auto;
-    text-align: center;
-    padding: 5%;
-}
-
 .about {
-    width: 45%; 
+    width: 80%; 
     height: auto; 
     display: inline; 
     padding: 3%;
     font-size: 14px; /* changes depending on device screen size */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(60,179,113, 0.3);
+    font-family: 'Crimson Text', serif;
+    background-color: honeydew;
     color: darkslategray;
 }
 
 .aboutList {
     font-size: 14px; /* changes depending on device screen size */
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Crimson text', serif;
     color: darkslategray;
+    margin-bottom: 3%;
 }
 
+
 footer {
+    margin: 20px;
     float: right;
     font-size: 12px;
-    font-family: serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* for devices larger than a mobile but smaller than a large latop */
@@ -106,20 +175,18 @@ footer {
     .subtitle {
         font-size: 20px;
     }
-
+    
     .container {
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-    .art {
-        width: 45%;
-        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
-    /* the longer drawing should have its own column to not be overly shrunken */
-    #goddesses {
-        width: 90%;
+    #title {
+        font-size: 20px;
+    }
+    
+    #info {
+        font-size: 15px;
     }
 
     .about {
@@ -141,20 +208,18 @@ footer {
     .subtitle {
         font-size: 25px;
     }
-
+    
     .container {
-        flex-wrap: wrap;
-        flex-direction: row;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
 
-    .art {
-        width: 50%;
-        height: auto;
+    #title {
+        font-size: 25px;
     }
-
-    /* the longer drawing should have its own column to not be overly shrunken */
-    #goddesses {
-        width: 90%;
+    
+    #info {
+        font-size: 22px;
     }
 
     .about {
